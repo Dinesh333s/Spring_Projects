@@ -1,0 +1,22 @@
+package com.demo;
+
+public class Alien {
+
+	private int age;
+	private Laptop lap;
+	public Alien()
+	{
+		System.out.println("I'm constructor..");
+	}
+	public void code() {
+		System.out.println("HI I'm code function...");
+	}
+	public int getAge() {
+		System.out.println("Age assigned");
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+}

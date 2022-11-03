@@ -1,0 +1,7 @@
+package com.example.first;
+
+public interface Computer {
+	
+ void compile();
+
+}
