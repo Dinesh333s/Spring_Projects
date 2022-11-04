@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,6 +17,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class Homecontroller {
     
+	@ModelAttribute
+	public void Modeldata(Model m)
+	{
+		m.addAttribute("name", "Dinesh");
+	}
+	
+	
+	
 	@RequestMapping("/") // it's used map webrequest onto the handler method or handler class
 	public String Home()
 	{
@@ -41,5 +50,17 @@ public class Homecontroller {
 		return "result";     
 	}
 	
+	@RequestMapping("addalien")
+//	public String addalien(@RequestParam("aid") int aid,@RequestParam("aname") String aname,Model m) {
+		public String addalien(@ModelAttribute Alien a) // it'll bind the data with a pojo bean
+//		public String addalien(Alien a) 
+	{ 
+//		Alien a = new Alien();
+//		a.setAid(aid);
+//		a.setAname(aname);
+//	    m.addAttribute("Alien", a);	
+
+		return "result";
+	}
 	
 }
