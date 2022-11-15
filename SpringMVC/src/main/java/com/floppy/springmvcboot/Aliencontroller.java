@@ -27,6 +27,9 @@ public class Aliencontroller {
 	public List<Alien> getalien()
 	{
 	List<Alien> aliens = repo.findAll();
+//	int i = 9/0;
+	System.out.println("I m get alien method");
+	
 		return aliens;
 		
 	}
