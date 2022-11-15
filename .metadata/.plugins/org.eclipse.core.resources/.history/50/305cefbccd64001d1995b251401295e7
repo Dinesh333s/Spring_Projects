@@ -1,0 +1,42 @@
+package com.floppy.springmvcboot;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.floppy.springmvcboot.model.Alien;
+
+@Controller
+public class Aliencontroller {
+
+	@Autowired
+	Alienrepo repo;
+
+	
+	//getting all the data
+	@GetMapping("aliens")  //like select * from dbtable
+	@ResponseBody
+	public List<Alien> getalien()
+	{
+	List<Alien> aliens = repo.findAll();
+		return aliens;
+		
+	}
+	
+//getting particular data
+
+	@GetMapping()
+	@ResponseBody
+	public Alien selectOne(int aid)
+	{
+		    Alien aliens= repo.findById(aid).orElse(new Alien(0,""));
+		return aliens;
+	}
+	
+	
+	
+	
+}
