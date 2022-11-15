@@ -1,0 +1,21 @@
+package com.floppy.springmvcboot;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.floppy.springmvcboot.model.Alien;
+
+//import antlr.collections.List;
+import java.util.List;
+
+public interface Alienrepo extends JpaRepository<Alien, Integer>{
+
+
+	List<Alien> findByAname(String aname);  //Query DSL
+
+	List<Alien> findByAnameOrderByAname(String aname);
+
+//	List<Alien> findByAnameOrderByAid(String aname);
+
+	
+
+}
