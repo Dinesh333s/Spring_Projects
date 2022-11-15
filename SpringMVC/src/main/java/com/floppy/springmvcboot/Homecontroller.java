@@ -84,10 +84,11 @@ public class Homecontroller implements ErrorController {
 
 //        m.addAttribute("result",((Alienrepo) repo).findByAname(aname));
 //        m.addAttribute("result",repo.findByAnameOrderByAname(aname));
-        m.addAttribute("result",repo.findByAnameOrderByAidDesc(aname));
+//        m.addAttribute("result",repo.findByAnameOrderByAidDesc(aname));
+		  m.addAttribute("result", repo.find(aname));
 		return "showalien";
 	}
-
+ 
 //	@RequestMapping(value = "addalien", method=RequestMethod.POST) 1 way
 	@PostMapping("addalien") // 2nd way
 //	public String addalien(@RequestParam("aid") int aid,@RequestParam("aname") String aname,Model m) {
