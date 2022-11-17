@@ -1,8 +1,0 @@
-package com.demo;
-
-public class Laptop {
-public void compile()
-{
-	System.out.println("I'm compiling...");
-}
-}

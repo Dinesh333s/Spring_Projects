@@ -1,7 +1,0 @@
-package com.floppy.springmvcboot;
-
-public class Alien {
-   private int aid;
-   private String aname;
-
-}
