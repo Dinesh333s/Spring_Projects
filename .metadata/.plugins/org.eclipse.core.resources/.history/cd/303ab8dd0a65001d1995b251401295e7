@@ -1,9 +1,0 @@
-package com.floppy.springmvcboot;
-
-public class LoggingAspects {
-
-	public void Logging()
-	{
-		System.out.println("get Alien Executed..");
-	}
-}
